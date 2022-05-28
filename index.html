@@ -17,59 +17,68 @@
    along with this program; if not, write to the Free Software
    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -->
-<html>
+
+<!--
+   Codi estilitzat per ludg1e.
+-->
+
+<!DOCTYPE html>
+<html style="font-family: Arial;">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>View home with Sweet Home 3D JS Viewer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <title>Visualitzador SH3D-JS</title>
 
-<!--  Copy the following scripts in your page header -->
-<script type="text/javascript" src="lib/big.min.js"></script>
-<script type="text/javascript" src="lib/gl-matrix-min.js"></script>
-<script type="text/javascript" src="lib/jszip.min.js"></script>
-<script type="text/javascript" src="lib/core.min.js"></script>
-<script type="text/javascript" src="lib/geom.min.js"></script>
-<script type="text/javascript" src="lib/stroke.min.js"></script>
-<script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
-<script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
-<script type="text/javascript" src="lib/triangulator.min.js"></script>
-<script type="text/javascript" src="lib/viewmodel.min.js"></script>
-<script type="text/javascript" src="lib/viewhome.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
-<style type="text/css">
-/* The class of components handled by the viewer */
-.viewerComponent {
-}
-</style>
+    <script type="text/javascript" src="lib/big.min.js"></script>
+    <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="lib/jszip.min.js"></script>
+    <script type="text/javascript" src="lib/core.min.js"></script>
+    <script type="text/javascript" src="lib/geom.min.js"></script>
+    <script type="text/javascript" src="lib/stroke.min.js"></script>
+    <script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
+    <script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
+    <script type="text/javascript" src="lib/triangulator.min.js"></script>
+    <script type="text/javascript" src="lib/viewmodel.min.js"></script>
+    <script type="text/javascript" src="lib/viewhome.min.js"></script>
+
+    <style type="text/css">
+        .viewerComponent {}
+    </style>
 </head>
 
 <body>
-<div>
-  <!-- Copy the following button in your page, updating the default.sh3d URL and parameters if necessary -->
-  <!-- Mouse and keyboard navigation explained at 
-       http://sweethome3d.cvs.sf.net/viewvc/sweethome3d/SweetHome3D/src/com/eteks/sweethome3d/viewcontroller/resources/help/en/editing3DView.html 
-       You may also switch between aerial view and virtual visit with the space bar -->
-  <!-- For browser compatibility, see http://caniuse.com/webgl -->
-  <button onclick='viewHomeInOverlay("propostamodel3d_25042022.sh3d",               
+    <div id="load-button">
+        <button type="button" style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); width: 100px; height: 100px; background-color: green; border-style: solid; border-radius: 25px; border-color: darkgreen; " onclick='viewHomeInOverlay("default.sh3d",               
               {roundsPerMinute:    1,                              /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */ 
                widthByHeightRatio: 4/3,                            /* Size ratio of the displayed canvas */
                navigationPanel: "none",                            /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key 
                                                                       attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */ 
-               aerialViewButtonText: "Aerial view",                /* Text displayed for aerial view radio button, no radio buttons if missing */ 
-               virtualVisitButtonText: "Virtual visit",            /* Text displayed for virtual visit radio button, no radio buttons if missing */
+               aerialViewButtonText: "Vista aèria",                /* Text displayed for aerial view radio button, no radio buttons if missing */ 
+               virtualVisitButtonText: "Visita virtual",            /* Text displayed for virtual visit radio button, no radio buttons if missing */
             /* level: "Roof", */                                   /* Uncomment to select the displayed level, default level if missing */
             /* selectableLevels: ["Ground floor", "Roof"], */      /* Uncomment to choose the list of displayed levels, no select component if empty array */
             /* camera: "Exterior view", */                         /* Uncomment to select a camera, default camera if missing */
             /* selectableCameras: ["Exterior view", "Kitchen"], */ /* Uncomment to choose the list of displayed cameras, no camera if missing */
                activateCameraSwitchKey: true,                      /* Switch between top view / virtual visit with space bar if not false or missing */
                viewerControlsAdditionalHTML: "",                   /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
-               readingHomeText: "Reading",                         /* Comment displayed while reading home */
+               readingHomeText: "Llegint",                         /* Comment displayed while reading home */
                readingModelText: "Model",                          /* Comment displayed while reading models */
-               noWebGLSupportError: "No WebGL support"             /* Error message displayed if the browser do not support WebGL */
-              })'>View home</button>
-</div>
+               noWebGLSupportError: "El teu navegador no suporta WebGL"             /* Error message displayed if the browser do not support WebGL */
+              })'>
+            <i class="bi bi-play-fill" style="font-size: 5em; color: white;"></i>
+        </button>
+    </div>
 
-<div style="position: absolute; bottom: 5px; text-align: center; width: 95%; z-index: -1">
-  <a href="http://www.sweethome3d.com">Sweet Home 3D</a> JS Viewer / Version 6.2 - Distributed under GNU General Public License
-</div>
+    <div id="sh3d-info" style="display: inline-block; position: absolute; bottom: 5px; text-align: center; width: 100%; z-index: -1;">
+        <a href="http://www.sweethome3d.com">Sweet Home 3D</a> JS Viewer / Versió 6.2 - Distribuït sota la Llicència Pública General GNU (GPLv3)
+    </div>
+
+    <div id="source-code" style="position: absolute; bottom: 8px; right: 16px;">
+        <a href="https://github.com/ludg1e/sh3d-hiperaula">Codi font (GitHub)</a>
+    </div>
 </body>
+
 </html>
