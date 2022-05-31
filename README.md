@@ -1,5 +1,5 @@
 # sh3d-hiperaula
-Aquest repositori conté els arxius necessaris per al funcionament òptim del visualitzador SH3D JS.
+Aquest repositori conté els arxius necessaris per al funcionament òptim del visualitzador SH3D-JS.
 
 El codi de l'arxiu "[index.html](https://github.com/ludg1e/sh3d-hiperaula/blob/main/index.html)" ha sigut modificat i estilitzat mínimament i el resultat final pot ser vist al lloc web: https://ludg1e.github.io/sh3d-hiperaula/.
 
