@@ -17,10 +17,8 @@ Els models externs extrets de pàgines web d'internet i que estan inclosos en l'
 
 Les llibreries web utilitzades per aquest repositori i que romanen en la carpeta: "[lib](https://github.com/ludg1e/sh3d-hiperaula/tree/main/lib)" són propietat dels seus respectius autors i les seves llicències estan disponibles en aquest mateix repositori.
 
-"[jQuery](https://jquery.com/)" és propietat de "OpenJS Foundation" i està llicenciat sota la llicència MIT.
+"[Bootstrap](https://getbootstrap.com/)" i les seves llibreries, tals com "[Bootstrap Icons](https://icons.getbootstrap.com/)", són una marca i propietat de: "Twitter, Inc." i estan llicenciades sota la llicència MIT.
 
-"[Bootstrap](https://getbootstrap.com/)" i les seves llibreries, tals com "[Bootstrap Icons](https://icons.getbootstrap.com/)" són una marca i propietat de: "Twitter, Inc." i estan llicenciades sota la llicència MIT.
+El codi de l'arxiu: "[index.html](https://github.com/ludg1e/sh3d-hiperaula/blob/main/index.html)" és un derivat de l'arxiu: "SweetHome3DJSViewerInOverlay.html" i, està llicenciat sota domini públic.
 
-"[lib/close.png](https://github.com/ludg1e/sh3d-hiperaula/blob/main/lib/close.png)" és un arxiu en format d'imatge PNG, el qual és gratuït i prové del lloc web "[Icons8](https://icons8.com/)".
-
-El codi de l'arxiu: "[index.html](https://github.com/ludg1e/sh3d-hiperaula/blob/main/index.html)" és un derivat de l'arxiu "SweetHome3DJSViewerInOverlay.html" i, està llicenciat sota domini públic.
+"[lib/close.png](https://github.com/ludg1e/sh3d-hiperaula/blob/main/lib/close.png)" és un arxiu en format d'imatge PNG, el qual és gratuït i prové del lloc web: "[Icons8](https://icons8.com/)".
