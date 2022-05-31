@@ -26,8 +26,9 @@
 <html style="font-family: Arial;">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>Visualitzador SH3D-JS</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -43,6 +44,7 @@
     <script type="text/javascript" src="lib/triangulator.min.js"></script>
     <script type="text/javascript" src="lib/viewmodel.min.js"></script>
     <script type="text/javascript" src="lib/viewhome.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style type="text/css">
         .viewerComponent {}
@@ -50,8 +52,9 @@
 </head>
 
 <body>
-    <div id="load-button">
-        <button type="button" style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); width: 100px; height: 100px; background-color: green; border-style: solid; border-radius: 25px; border-color: darkgreen; " onclick='viewHomeInOverlay("propostamodel3d_25042022.sh3d",               
+    <div id="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 94.5vh;">
+        <div id="load-button" style="visibility: visible;">
+            <button type="button" style="width: 100px; height: 100px; background-color: green; border-style: solid; border-color: darkgreen; border-radius: 25px;" onclick='viewHomeInOverlay("propostamodel3d_25042022.sh3d",               
               {roundsPerMinute:    1,                              /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */ 
                widthByHeightRatio: 4/3,                            /* Size ratio of the displayed canvas */
                navigationPanel: "none",                            /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key 
@@ -68,17 +71,41 @@
                readingModelText: "Model",                          /* Comment displayed while reading models */
                noWebGLSupportError: "El teu navegador no suporta WebGL"             /* Error message displayed if the browser do not support WebGL */
               })'>
-            <i class="bi bi-play-fill" style="font-size: 5em; color: white;"></i>
-        </button>
+                <i id="play-svg" class="bi bi-play-fill" style="display: flex; justify-content: center; align-items: center; font-size: 5em; color: white;"></i>
+            </button>
+        </div>
     </div>
 
-    <div id="sh3d-info" style="display: inline-block; position: absolute; bottom: 5px; text-align: center; width: 100%; z-index: -1;">
-        <a href="http://www.sweethome3d.com">Sweet Home 3D</a> JS Viewer / Versió 6.2 - Distribuït sota la Llicència Pública General GNU (GPLv3)
-    </div>
-
-    <div id="source-code" style="position: absolute; bottom: 8px; right: 16px;">
-        <a href="https://github.com/ludg1e/sh3d-hiperaula">Codi font (GitHub)</a>
+    <div id="footer-text" style="display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; /*height: 100vh;*/ flex-grow: 0; flex-shrink: 0; color: black;">
+        <div id="sh3d-info-text">
+            <a href="https://sweethome3d.com">Sweet Home 3D</a> JS Viewer / Versió 6.2 - Distribuït sota la Llicència Pública General GNU (GPLv3).
+        </div>
+        <div id="source-code-text">
+            <a href="https://github.com/ludg1e/sh3d-hiperaula">Codi font (GitHub)</a>
+        </div>
     </div>
 </body>
 
-</html>
+<script type="text/javascript">
+    const button = document.getElementById('load-button')
+    const footerinfo = document.getElementById('footer-text')
+    const viewer = document.getElementById('viewerCanvas')
+
+    button.addEventListener('click', function handleClick() {
+        console.log('HTML element with ID: "load-button" clicked successfully');
+        button.style.visibility = "hidden";
+        footerinfo.style.color = "grey";
+    });
+
+    function isInViewport() {
+        console.log("hello");
+    };
+
+    const rect = viewer.getBoundingClientRect();
+
+    console.log(rect);
+</script>
+
+</html>// This is just a sample script. Paste your real code (javascript or HTML) here.
+
+if ('this_is'==/an_example/){of_beautifier();}else{var a=b?(c%d):e[f];}
