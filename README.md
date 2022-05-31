@@ -19,7 +19,7 @@ Les llibreries web utilitzades per aquest repositori i que romanen en la carpeta
 
 "[jQuery](https://jquery.com/)" és propietat de "OpenJS Foundation" i està llicenciat sota la llicència MIT.
 
-"[Bootstrap](https://getbootstrap.com/)" i els seus productes, tals com "[Bootsrap Icons](https://icons.getbootstrap.com/)" són una marca i propietat de: "Twitter, Inc." i estan llicenciats sota la llicència MIT.
+"[Bootstrap](https://getbootstrap.com/)" i les seves llibreries, tals com "[Bootstrap Icons](https://icons.getbootstrap.com/)" són una marca i propietat de: "Twitter, Inc." i estan llicenciades sota la llicència MIT.
 
 "lib/close.png" és un arxiu en format d'imatge PNG, el qual és gratuït i prové del lloc web "[Icons8](https://icons8.com/)".
 
