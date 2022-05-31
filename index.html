@@ -44,7 +44,6 @@
     <script type="text/javascript" src="lib/triangulator.min.js"></script>
     <script type="text/javascript" src="lib/viewmodel.min.js"></script>
     <script type="text/javascript" src="lib/viewhome.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style type="text/css">
         .viewerComponent {}
@@ -53,7 +52,7 @@
 
 <body>
     <div id="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 94.5vh;">
-        <div id="load-button" style="visibility: visible;">
+        <div id="load-button">
             <button type="button" style="width: 100px; height: 100px; background-color: green; border-style: solid; border-color: darkgreen; border-radius: 25px;" onclick='viewHomeInOverlay("propostamodel3d_25042022.sh3d",               
               {roundsPerMinute:    3,                              /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */ 
                widthByHeightRatio: 4/3,                            /* Size ratio of the displayed canvas */
