@@ -3,7 +3,7 @@ Aquest repositori conté els arxius necessaris per al funcionament òptim del vi
 
 El codi de l'arxiu "[index.html](https://github.com/ludg1e/sh3d-hiperaula/blob/main/index.html)" ha sigut modificat i estilitzat mínimament i el resultat final pot ser vist al lloc web: https://ludg1e.github.io/sh3d-hiperaula/.
 
-# Llicències i crèdits
+## Llicències i crèdits
 [Sweet Home 3D](https://www.sweethome3d.com/) està llicenciat i distribuït sota la Llicència Pública General GNU (GPLv3) i és propietat de: "Emmanuel PUYBARET / eTeks <info@eteks.com>".
 
 [Sweet Home 3D JS Viewer](https://sourceforge.net/projects/sweethome3d/files/SweetHome3D-viewer/) està llicenciat i distribuït sota la Llicència Pública General GNU (GPLv3) i és propietat de: "Emmanuel PUYBARET / eTeks <info@eteks.com>".
